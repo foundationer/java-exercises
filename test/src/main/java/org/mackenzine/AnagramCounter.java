@@ -1,9 +1,9 @@
-package org.baires.dev.test.anagrams;
+package org.mackenzine;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.google.common.collect.Maps;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Anagram counter.
@@ -38,14 +38,10 @@ public class AnagramCounter {
 	 * @param main a member of the equivalence class to be detected
 	 * @return A sublist containing words that are anagrams of the first word in the original list.
 	 */
-	public List<String> detectAnagramClass(final List<String> wordList, final String main) {
-		List<String> anagramClass = new ArrayList<String>();
-		for (String word : wordList) {
-			if(isAnagramOf(word, main)) {
-				anagramClass.add(word);
-			}
-		}
-		return anagramClass;
+	public List<String> detectAnagramClass(final Collection<String> wordList, final String main) {
+		return wordList.stream()
+				.filter(word -> isAnagramOf(word, main))
+				.collect(Collectors.toList());
 	}
 
 	/**

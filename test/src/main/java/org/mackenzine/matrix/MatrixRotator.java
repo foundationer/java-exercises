@@ -1,4 +1,4 @@
-package org.baires.dev.test.matrix;
+package org.mackenzine.matrix;
 
 public class MatrixRotator {
 
