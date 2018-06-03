@@ -1,8 +1,6 @@
-Java Exercises
-==============
+#Java Exercises
 
-Anagram Counter
-===============
+##Anagram Counter
 
 An anagram is a word where when you rearrange the letters to get another word.
 Say you had a list of words and you wanted to count the number of unique anagrams there are. For example:
@@ -23,8 +21,7 @@ $count = array( 'act' => 3,
         'face' => 2,
         'univision' => 1 );
         
-Matrix Rotator
-==============
+##Matrix Rotator
 
 Rotate a matrix of characters (so no vector multiplication can be done) 90 degrees.
 
@@ -37,3 +34,8 @@ $m = array();
 $m[0] = {'a', 'b', 'c'};
 $m[1] = {'d', 'e', 'f'};
 $m[2] = {'g', 'h', 'i'};
+
+## Triple Double
+
+Given two integers, tell if the first contains a subsequence of three consecutive digits equal between each other. Also tell if the second contains a subsequence of two consecutive digits equal between each other.
+
