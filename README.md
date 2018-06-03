@@ -1,6 +1,6 @@
-#Java Exercises
+# Java Exercises
 
-##Anagram Counter
+## Anagram Counter
 
 An anagram is a word where when you rearrange the letters to get another word.
 Say you had a list of words and you wanted to count the number of unique anagrams there are. For example:
@@ -21,7 +21,7 @@ $count = array( 'act' => 3,
         'face' => 2,
         'univision' => 1 );
         
-##Matrix Rotator
+## Matrix Rotator
 
 Rotate a matrix of characters (so no vector multiplication can be done) 90 degrees.
 
