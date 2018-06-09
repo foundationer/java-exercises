@@ -1,5 +1,6 @@
 package org.mackenzine;
 
+import com.google.common.collect.Collections2;
 import com.google.common.collect.Maps;
 
 import java.util.*;
@@ -50,7 +51,7 @@ public class AnagramCounter {
 	 * @return a map with the number of anagrams for each anagram class.
 	 */
 	public Map<String, Integer> count(final List<String> wordList) {
-		Map<String, Integer> result = new HashMap<String, Integer>();
+		Map<String, Integer> result = new HashMap<>();
 
 		while(!wordList.isEmpty()) {
 			String firstWord = wordList.get(0);
