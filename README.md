@@ -35,6 +35,10 @@ $m[0] = {'a', 'b', 'c'};
 $m[1] = {'d', 'e', 'f'};
 $m[2] = {'g', 'h', 'i'};
 
+## Reverse Polish Notation Calculator
+
+A simple RPN calculator that operates on double precision floating point numbers. It uses it's own stack implementation.
+
 ## Triple Double
 
 Given two integers, tell if the first contains a subsequence of three consecutive digits equal between each other. Also tell if the second contains a subsequence of two consecutive digits equal between each other.
