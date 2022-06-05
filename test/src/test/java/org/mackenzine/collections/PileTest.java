@@ -1,27 +1,21 @@
 package org.mackenzine.collections;
 
 import com.google.common.primitives.UnsignedInteger;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PileTest {
 
     private Pile pile;
 
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
-
-    @Before
+    @BeforeEach
     public void setUp() {
         pile = new Pile();
     }
@@ -50,10 +44,7 @@ public class PileTest {
 
     @Test
     public void exceptionWhenPopOnEmptyPile() {
-        exception.expect(PileException.class);
-        exception.expectMessage("Attempt to pop element from empty pile!");
-
-        pile.pop();
+        assertThrows(PileException.class, () -> pile.pop());
     }
 
     @Test
@@ -65,6 +56,5 @@ public class PileTest {
     public void topOnNonEmptyPile() {
         pile.push(1);
         assertThat(pile.top(), is(equalTo(Optional.of(1))));
-
     }
 }

@@ -1,6 +1,7 @@
 package org.mackenzine.collections;
 
-import com.google.common.base.Objects;
+
+import java.util.Objects;
 
 public class Node<T> {
 
@@ -31,13 +32,13 @@ public class Node<T> {
         if (this == o) return true;
         if (!(o instanceof Node)) return false;
         Node<?> node = (Node<?>) o;
-        return Objects.equal(value, node.value) &&
-                Objects.equal(previous, node.previous) &&
-                Objects.equal(next, node.next);
+        return Objects.equals(value, node.value) &&
+                Objects.equals(previous, node.previous) &&
+                Objects.equals(next, node.next);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(value, previous, next);
+        return Objects.hash(value, previous, next);
     }
 }

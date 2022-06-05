@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 public class Sorting {
 
-    public static Function<int[], int[]> bubbleSort = elements -> {
+    final public static Function<int[], int[]> bubbleSort = elements -> {
         int length = elements.length;
         for (int i = length; i >= 0; i--) {
             IntStream.rangeClosed(0, length - 2)

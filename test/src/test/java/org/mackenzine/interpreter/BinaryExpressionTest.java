@@ -1,11 +1,11 @@
 package org.mackenzine.interpreter;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BinaryExpressionTest {
 
@@ -13,7 +13,7 @@ public class BinaryExpressionTest {
     private UnaryExpression leftOperand;
     private UnaryExpression rightOperand;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         leftOperand = new UnaryExpression("6");
         rightOperand = new UnaryExpression("5");

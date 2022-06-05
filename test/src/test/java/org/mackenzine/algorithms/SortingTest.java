@@ -1,24 +1,22 @@
 package org.mackenzine.algorithms;
 
-import org.junit.Test;
-import org.junit.experimental.theories.DataPoints;
-import org.junit.experimental.theories.Theories;
-import org.junit.experimental.theories.Theory;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.function.Function;
+import java.util.stream.Stream;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@RunWith(Theories.class)
 public class SortingTest {
 
-    @DataPoints
-    public static Function<int[], int[]>[] dataPoints = new Function[] { Sorting.bubbleSort, Sorting.insertionSort,
-            Sorting.selectionSort };
+    static Stream<Function<int[], int[]>> algorithms() {
+        return Stream.of(Sorting.bubbleSort, Sorting.insertionSort, Sorting.selectionSort);
+    }
 
-    @Theory
+    @ParameterizedTest
+    @MethodSource("algorithms")
     public void sortOfEmptyArray(Function<int[], int[]> algorithm) {
         int[] elements = new int[0];
 
@@ -27,7 +25,8 @@ public class SortingTest {
         assertEquals(0, elements.length);
     }
 
-    @Theory
+    @ParameterizedTest
+    @MethodSource("algorithms")
     public void sortOfSingleElement(Function<int[], int[]> algorithm) {
         int[] elements = new int[] { 1 };
 
@@ -36,7 +35,8 @@ public class SortingTest {
         assertArrayEquals(new int[] { 1 }, elements);
     }
 
-    @Theory
+    @ParameterizedTest
+    @MethodSource("algorithms")
     public void sortOfMultipleElements(Function<int[], int[]> algorithm) {
         int[] elements = new int[] { 3, 1, 2 };
 

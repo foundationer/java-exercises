@@ -1,9 +1,10 @@
 package org.mackenzine.matrix;
 
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MatrixJumperTest {
 
@@ -11,7 +12,7 @@ public class MatrixJumperTest {
 	private final char[][] matrix = new char[3][3];
 	private int limit;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		matrix[0] = new char[] { 'a', 'b', 'c' };
 		matrix[1] = new char[] { 'd', 'e', 'f' };

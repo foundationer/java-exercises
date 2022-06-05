@@ -1,23 +1,20 @@
 package org.mackenzine;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.mackenzine.AnagramCounter;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AnagramCounterTest {
 
 	private AnagramCounter counter;
 	private List<String> wordList;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		counter = new AnagramCounter();
 		wordList = new ArrayList<String>();

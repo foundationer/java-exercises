@@ -1,15 +1,16 @@
 package org.mackenzine.matrix;
 
-import static org.junit.Assert.assertArrayEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MatrixRotatorTest {
 
 	private MatrixRotator rotator;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		rotator = new MatrixRotator();
 	}

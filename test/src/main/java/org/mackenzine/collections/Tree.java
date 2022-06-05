@@ -1,6 +1,6 @@
 package org.mackenzine.collections;
 
-import com.google.common.collect.Lists;
+import org.mackenzine.commons.Collections;
 
 import java.util.*;
 
@@ -42,7 +42,7 @@ public class Tree<T> {
 
     public List<T> preOrder() {
         Pile<Tree<T>> pileOfTrees = new Pile<>();
-        List<T> result = Lists.newArrayList();
+        List<T> result = new ArrayList<>();
         pileOfTrees.push(this);
         while (!pileOfTrees.isEmpty()) {
             Optional<Tree<T>> top = pileOfTrees.pop();
