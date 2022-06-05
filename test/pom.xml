@@ -9,6 +9,11 @@
         <maven.compiler.target>11</maven.compiler.target>
         <junit.version>5.8.2</junit.version>
     </properties>
+    <parent>
+        <artifactId>java-exercises</artifactId>
+        <groupId>org.mackenzine</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>

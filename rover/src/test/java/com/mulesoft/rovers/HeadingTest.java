@@ -1,10 +1,9 @@
 package com.mulesoft.rovers;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
 import com.mulesoft.rovers.exceptions.HeadingException;
 
@@ -12,15 +11,9 @@ public class HeadingTest {
 
 	private Heading heading;
 
-	@Rule
-	public ExpectedException exception = ExpectedException.none();
-
 	@Test
 	public void shouldThrowExceptionOnInvalidDirection() throws HeadingException {
-		exception.expect(HeadingException.class);
-		exception.expectMessage("Wrong heading");
-
-		new Heading('?');
+		assertThrows(HeadingException.class, () -> new Heading('?'));
 	}
 
 	@Test
